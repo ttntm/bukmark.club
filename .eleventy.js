@@ -1,0 +1,67 @@
+// PKGS
+const _ = require('lodash')
+const htmlmin = require('html-minifier')
+const markdownIt = require('markdown-it')
+
+module.exports = (config) => {
+  // rebuild on CSS changes
+  config.addWatchTarget('./src/_includes/css/')
+
+  // Markdown
+  config.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true
+    })
+  )
+
+  // COLLECTIONS
+  config.addCollection('directory', (collection) => {
+    // group directory entries alphabetically, based on the first lettler of their respective title
+    return _.chain(collection.getFilteredByGlob('./src/directory/*.md'))
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+      .groupBy((item) => String(item.data.title).toUpperCase()[0])
+      .toPairs()
+      .value()
+  })
+
+  config.addCollection('latest', async(collection) => {
+    return collection.getFilteredByGlob('./src/directory/*.md')
+      .filter((item, index, list) => index >= list.length-5)
+  })
+
+  // STATIC FILES
+  config.addPassthroughCopy({ './src/static/': '/' })
+
+  // TRANSFORM -- Minify HTML Output
+  config.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath && outputPath.endsWith('.html')) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+      return minified
+    }
+    return content
+  })
+
+  return {
+    dir: {
+      input: 'src',
+      output: 'public',
+      data: '_data',
+      includes: '_includes',
+      layouts: '_layouts'
+    },
+    templateFormats: [
+      'md',
+      'njk',
+      '11ty.js'
+    ],
+    htmlTemplateEngine: 'njk'
+  }
+}

@@ -1,0 +1,24 @@
+{%- set absolutePageUrl -%}{{ page.url | url }}{%- endset -%}
+
+<link rel="preload" href="/css/page.css" as="style">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="{{ site.author }}">
+<meta name="robots" content="index,follow">
+<meta name="description" content="{{ description or site.description }}">
+<title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %} | {{ site.author }}</title>
+<link rel="canonical" href="{{ absolutePageUrl }}">
+
+<link rel="stylesheet" href="/css/page.css">
+
+{# Open Graph #}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description  or site.description }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+<meta name="twitter:card" content="{%- if image -%}summary_large_image{% else %}summary{%- endif -%}">
+{%- if image -%}
+  <meta property="og:image" content="{{ image | url }}">
+{% else %}
+  <meta property="og:image" content="{{ site.baseUrl }}/img/social.jpg">
+{%- endif -%}

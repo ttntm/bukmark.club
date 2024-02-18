@@ -1,0 +1,29 @@
+{
+  "name": "bukmark.club",
+  "version": "1.0.0",
+  "description": "A collection of web pages from across the Internet that have a curated collection of bookmarks and/or links.",
+  "scripts": {
+    "deploy": "eleventy",
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttntm/bukmark.club.git"
+  },
+  "author": "ttntm",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ttntm/bukmark.club/issues"
+  },
+  "homepage": "https://github.com/ttntm/bukmark.club#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "cssnano": "^5.1.14",
+    "date-and-time": "^1.0.0",
+    "html-minifier": "^4.0.0",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.31",
+    "postcss-import": "^14.0.0"
+  }
+}

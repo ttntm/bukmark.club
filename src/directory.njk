@@ -1,0 +1,44 @@
+---
+title: Directory
+description: The bukmarks.club directory.
+layout: base.njk
+permalink: /directory/index.html
+eleventyExcludeFromCollections: true
+---
+<h1>The BUKMARK.CLUB Directory</h1>
+<p>A list of all member sites.</p>
+<p>Member websites must have a curated collection of bookmarks and/or links to other websites.</p>
+<p>
+  Disaclaimer: We do _not_ accept any responsibility for any linked site's content.
+  <br>
+  We try to take good care of this directory, but this is the internet, so any given website can change at any moment. Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> if you should find broken links or any other issues with any of the sites linked below.
+</p>
+<h2>Directory Index</h2>
+<ul class="flex flex-wrap gap1 mb2">
+  {% for letter, letterPages in collections.directory %}
+    <li>
+      <a href="#section-{{ letter }}">[{{ letter }}]</a>
+    </li>
+  {% endfor %}
+</ul>
+{% for letter, letterPages in collections.directory %}
+  <article class="{% if not loop.last %}mb2{% endif %}">
+    <div class="flex align-items-center justify-content-between" style="border-bottom: 1px solid slateblue;">
+      <h2 id="section-{{ letter }}" class="m0" style="border: 0;">[{{ letter }}]</h2>
+      <a class="block" href="#top" title="Back to top">[^]</a>
+    </div>
+    <ul class="grid grid3 gap2 my1">
+      {% for page in letterPages %}
+        <li class="card">
+          <h3 class="h5 m0">{{ page.data.title }}</h3>
+          {% if page.data.author %}
+            <p class="m0">Author: {{ page.data.author }}</p>
+          {% endif %}
+          <p class="m0">
+            <a href="{{ page.data.url }}" rel="noopener" target="_blank">[Visit Site]</a>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endfor %}

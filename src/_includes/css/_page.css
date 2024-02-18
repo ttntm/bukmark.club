@@ -1,0 +1,210 @@
+@import './reset.css';
+@import './utils.css';
+
+:root {
+	--dark: #4C566A;
+	--darker: #3B4252;
+	--darkest: #2E3440;
+	--light: #D8DEE9;
+	--lighter: #E5E9F0;
+	--lightest: #ECEFF4;
+	--white: #fff;
+	--black: #000;
+  --pink: #bf75f7;
+  --blue: #00b0ec;
+	--font-sans: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::selection,
+::-moz-selection {
+  background: var(--blue);
+  color: var(--black);
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: var(--font-mono);
+  line-height: 1.15;
+  scroll-padding-top: 1rem;
+}
+
+body {
+	background: linear-gradient(to bottom right, hsl(220, 35%, 30%), hsl(250, 35%, 40%), hsl(280, 35%, 30%));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: var(--dark);
+  display: flex;
+  flex-direction: column;
+	font-family: var(--font-mono);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: slateblue;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid slateblue;
+}
+
+h2, .h2 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid slateblue;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5 {
+  font-size: 1.15rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p b {
+  font-weight: 700;
+}
+
+a, a:active {
+  color: var(--pink);
+}
+
+a:hover, a:focus {
+  color: var(--light);
+}
+
+header,
+main,
+footer {
+  background: rgba(25, 25, 25, 0.5);
+  color: var(--light);
+  width: 100%;
+  max-width: calc(100vw-2rem);
+  margin: 0 auto;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+@media screen and (min-width: 1024px) {
+  header,
+  main,
+  footer {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header,
+  main,
+  footer {
+    max-width: 1024px;
+  }
+}
+
+header {
+  background: linear-gradient(to bottom right, rgba(0,176,236,1) 0%, rgba(191,117,247,1) 50%, rgba(252,176,69,1) 100%); 
+}
+
+header nav {
+  background: rgba(25, 25, 25, 0.75);
+  border-top: 1px solid var(--black);
+  padding: .75rem 1rem;
+}
+
+header nav a {
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+main {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  flex-grow: 1;
+  padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 3rem 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background: rgba(25, 25, 25, 0.5);
+  border: 1px solid transparent;
+  box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.37);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: .875rem;
+  padding: 1.5rem;
+  transition: all .35s ease;
+}
+
+.card:hover {
+  border: 1px solid rgba(200, 200, 200, 0.25);
+  box-shadow: 0 2px 4px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card h3 {
+  color: var(--blue);
+}
+
+footer {
+  padding: 3rem 2rem;
+}
+
+.mobile-column {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+  .mobile-column {
+    flex-direction: row;
+  }
+}
