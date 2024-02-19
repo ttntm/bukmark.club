@@ -93,6 +93,10 @@ p b {
   font-weight: 700;
 }
 
+i {
+  font-style: italic;
+}
+
 a {
   transition: all .35s ease;
 }
