@@ -9,11 +9,16 @@ eleventyExcludeFromCollections: true
 <p>
   This is our directory of websites that provide a curated collection of bookmarks and/or links to other websites.
 </p>
-<p>
-  Disclaimer: We do <i>not</i> accept any responsibility for any linked site's content.
-  <br>
-  We try to take good care of this directory, but this is the internet - any listed website can change at any moment. Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should find broken links or discover any other issues with any of the sites listed below.
-</p>
+<details class="mb1">
+  <summary>
+    <b>Disclaimer</b>
+  </summary>
+  <p>
+    We do <i>not</i> accept any responsibility for any linked site's content.
+    <br>
+    We try to take good care of this directory, but this is the internet - any listed website can change at any moment. Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should find broken links or discover any other issues with a site listed below.
+  </p>
+</details>
 <h2>Index</h2>
 <ul class="flex flex-wrap gap1 mb2">
   {% for letter, letterPages in collections.directory %}

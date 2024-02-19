@@ -89,6 +89,7 @@ p {
   margin-bottom: 1rem;
 }
 
+b,
 p b {
   font-weight: 700;
 }
@@ -116,6 +117,10 @@ a:not(.logo) img {
 
 a:not(.logo):hover img {
   opacity: .5;
+}
+
+details:hover {
+  cursor: pointer;
 }
 
 header,
