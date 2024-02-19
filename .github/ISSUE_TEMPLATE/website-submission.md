@@ -16,7 +16,7 @@ _The BUKMARK.CLUB reserves the right to refuse any site deemed inappropriate. Th
 
 **Listing Data**
 
-<! -- Please include all necessary information (see READEM and/or existing listings) -->
+<! -- Please include all necessary information (see README and/or existing listings) -->
 
 ```
 ---
