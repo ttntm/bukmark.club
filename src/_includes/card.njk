@@ -1,0 +1,15 @@
+<li class="card">
+  <h3 class="h5 m0">{{ page.data.title }}</h3>
+  {% if page.data.author %}
+    <p class="m0">Author: {{ page.data.author }}</p>
+  {% endif %}
+  <p class="flex m0">
+    <a class="block" href="{{ page.data.url }}" rel="noopener" target="_blank">
+      {% if page.data.button %}
+        <img class="block" src="/img/directory/{{ page.data.button }}" title="Visit Site" width="88" alt="{{ page.data.title }} button">
+      {% else %}
+        [Visit Site]
+      {% endif %}
+    </a>
+  </p>
+</li>

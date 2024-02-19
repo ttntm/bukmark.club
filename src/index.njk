@@ -4,51 +4,61 @@ layout: base.njk
 ---
 <h1 class="">About the BUKMARK.CLUB</h1>
 <p>
-  A collection of web pages from across the Internet.
+  The BUKMARK.CLUB is a collection of web pages from across the Internet.
   <br><br>
   To be eligible for a listing in this directory, a website must have a curated collection of bookmarks and/or links to other websites.
 </p>
 <h2 class="mt2">Recent Additions</h2>
-<ul class="grid grid3 gap2 my1">
-{% for page in collections.latest | reverse %}
-  <li class="card">
-    <h3 class="h5 m0">{{ page.data.title }}</h3>
-    {% if page.data.author %}
-      <p class="m0">Author: {{ page.data.author }}</p>
-    {% endif %}
-    <p class="m0">
-      <a href="{{ page.data.url }}" rel="noopener" target="_blank">[Visit Site]</a>
-    </p>
-  </li>
-{% endfor %}
+<ul class="grid grid3 gap2 mt2 mb2">
+  {% for page in collections.latest | reverse %}
+    {% include "card.njk" %}
+  {% endfor %}
   <li class="flex justify-content-center" style="width: 100%; height: 100%;">
     <span style="align-self: center;">
-      <a class="h4" href="/directory">[Browse Directory]</a>
+      <a class="h4" href="/directory">[Browse&nbsp;Directory]</a>
     </span>
   </li>
 </ul>
-<h2 class="mt2">Joining the BUKMARK.CLUB</h2>
-<p>If you're interested in getting your site added to the BUKMARK.CLUB, all you need to do is:</p>
+<h2 class="mt2">Join the Club</h2>
+<p>
+  If you're interested in getting your site added to the BUKMARK.CLUB, all you need to do is:
+</p>
 <ol class="my1" style="list-style-type: decimal; padding-left: 3rem;">
   <li>Make sure you're adding a personal website.</li>
   <li>Make sure the site offers a curated collection of bookmarks and/or links to other websites at a dedicated URL (i.e. /bookmarks, /links).</li>
   <li>Head over to <a href="https://github.com/ttntm/bukmark.club" rel="noopener" target="_blank">[our GitHub repository]</a> and create a pull request (or an issue) to add your site.</li>
   <li>We will review you PR (or issue). If everything's alright, your site will be added to the directory.</li>
 </ol>
-<p>You can also contact us via email at webmaster[at]bukmark[dot]club to have your website listed. Please include all necessary information (see existing listings).</p>
-<p>Note: we reserve the explicit right _not_ to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.</p>
+<p>
+  You can also contact us via email at {{ site.email }} to have your website listed. Please include all necessary information (see existing listings).
+</p>
+<p>
+  Note: we reserve the explicit right _not_ to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.
+</p>
 <h3 class="mt2">The BUKMARK.CLUB Badge</h3>
-<p><b>Members</b> - Feel free to place this badge somewhere on your website:</p>
-<a href="/img/button_member.png">
-  <img src="/img/button_member.png" alt="Member button">
-</a>
-<p class="mt1"><b>Everyone else</b> - Please use this button for links to our directory:</p>
-<a href="/img/button_url.png">
-  <img src="/img/button_url.png" alt="URL button">
-</a>
+<p class="flex align-items-center flex-wrap gap1">
+  <span>
+    <b>Members</b>
+    <br>
+    Feel free to place this badge somewhere on your website:
+  </span>
+  <a href="/img/button_member.png">
+    <img class="block" src="/img/button_member.png" alt="Member button">
+  </a>
+</p>
+<p class="flex align-items-center flex-wrap gap1">
+  <span>
+    <b>Everyone else</b>
+    <br>
+    Please use this button for links to our directory:
+  </span>
+  <a href="/img/button_url.png">
+    <img class="block" src="/img/button_url.png" alt="URL button">
+  </a>
+</p>
 <h2 class="mt2">Contact Us</h2>
 <p>
   Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> if you should experience any issues with this website.
   <br><br>
-  You can also contact us via email at webmaster[at]bukmark[dot]club.
+  You can also contact us via email at {{ site.email }}.
 </p>

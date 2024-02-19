@@ -1,5 +1,6 @@
 ---
 title: sadgrl.online
-author: Sadness
 url: https://sadgrl.online
+author: Sadness
+button: sadgrlonline.gif
 ---

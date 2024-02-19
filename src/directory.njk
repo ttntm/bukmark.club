@@ -6,7 +6,9 @@ permalink: /directory/index.html
 eleventyExcludeFromCollections: true
 ---
 <h1>The BUKMARK.CLUB Directory</h1>
-<p>A directory of websites that provide a curated collection of bookmarks and/or links to other websites.</p>
+<p>
+  A directory of websites that provide a curated collection of bookmarks and/or links to other websites.
+</p>
 <p>
   Disclaimer: We do _not_ accept any responsibility for any linked site's content.
   <br>
@@ -28,17 +30,8 @@ eleventyExcludeFromCollections: true
     </div>
     <ul class="grid grid3 gap2 my1">
       {% for page in letterPages %}
-        <li class="card">
-          <h3 class="h5 m0">{{ page.data.title }}</h3>
-          {% if page.data.author %}
-            <p class="m0">Author: {{ page.data.author }}</p>
-          {% endif %}
-          <p class="m0">
-            <a href="{{ page.data.url }}" rel="noopener" target="_blank">[Visit Site]</a>
-          </p>
-        </li>
+        {% include "card.njk" %}
       {% endfor %}
     </ul>
   </article>
 {% endfor %}
-

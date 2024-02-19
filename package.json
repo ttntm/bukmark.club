@@ -1,7 +1,7 @@
 {
   "name": "bukmark.club",
   "version": "1.0.0",
-  "description": "A collection of web pages from across the Internet that have a curated collection of bookmarks and/or links.",
+  "description": "A directory of websites from across the Internet.",
   "scripts": {
     "deploy": "eleventy",
     "serve": "eleventy --serve",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/ttntm/bukmark.club/issues"
   },
-  "homepage": "https://github.com/ttntm/bukmark.club#readme",
+  "homepage": "https://bukmark.club",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "cssnano": "^5.1.14",

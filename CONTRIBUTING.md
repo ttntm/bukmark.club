@@ -1,14 +1,6 @@
-<p align="center">
-  <img src="./src/static/img/splash.png" alt="BUKMARK.CLUB">
-</p>
+# Contributing Guidelines
 
-# BUKMARK.CLUB
-
-The BUKMARK.CLUB is a directory of websites from across the Internet.
-
-To be eligible for a listing in this directory, a website must have a curated collection of bookmarks and/or links to other websites.
-
-## Adding Your Website
+## Adding Websites
 
 1. Fork this repository
 2. Navigate to `./src/directory/` and add your site as a **new** `*.md` file. Use existing sites as a reference in terms of required information
@@ -24,15 +16,11 @@ Add your website's data in your `*.md` file using the following properties:
 - `author`: Name yourself / optional
 - `button`: File name of a button for your listing / optional
 
-### Other Ways to Add Your Website
+## Development
 
-- [Open an issue](https://github.com/ttntm/bukmark.club/issues) in this repository
-- Email `webmaster[at]bukmark[dot]club` and include all necessary information
-
-## Contributing Guidelines
-
-see [CONTRIBUTING.md](./CONTRIBUTING.md)
-
-## License
-
-GPL-3.0; see [LICENSE](./LICENSE)
+1. Fork this repository
+2. Use `npm install` on your machine
+3. Use `npm run serve` to start a local webserver at `localhost:8080`
+4. Make changes
+5. Test your changes
+6. Open a pull request explaining the changes
