@@ -8,6 +8,10 @@ The BUKMARK.CLUB is a directory of websites from across the Internet.
 
 To be eligible for a listing in this directory, a website must have a curated collection of bookmarks and/or links to other websites.
 
+**Deploy Status**: 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/15fd7e73-4ae4-453b-9436-b8d231ab1054/deploy-status)](https://app.netlify.com/sites/bukmarkclub/deploys)
+
 ## Adding Your Website
 
 1. Fork this repository
