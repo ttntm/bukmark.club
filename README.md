@@ -15,7 +15,7 @@ To be eligible for a listing in this directory, a website must have a curated co
 ## Adding Your Website
 
 1. Fork this repository
-2. Navigate to `./src/directory/` and add your site as a **new** `*.md` file. Use existing sites as a reference in terms of required information
+2. Navigate to `./src/directory/` and add your site as a **new** `*.md` file; increment the 4-digit index number by 1 and use existing sites as a reference for file naming
 3. _Optional_: Add your own web button (88x31) in `./src/static/img/directory`; reference your button in your `*.md` file using its **filename** for the `button` front matter property
 4. Open a pull request for your changes
 
