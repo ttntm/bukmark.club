@@ -1,8 +1,8 @@
 ---
 name: Website Submission
 about: Submitting a website to the directory
-title: "[LISTING]"
-labels: ''
+title: "[LISTING] website_name"
+labels: 'listing'
 assignees: ttntm
 
 ---
