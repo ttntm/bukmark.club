@@ -1,5 +1,8 @@
 public
 
+# ignore the auto generated stats file
+/src/_data/info.json
+
 # Logs
 logs
 *.log

@@ -1,9 +1,17 @@
 // PKGS
 const _ = require('lodash')
+const dnt = require('date-and-time')
 const htmlmin = require('html-minifier')
 const markdownIt = require('markdown-it')
 
 module.exports = (config) => {
+  config.addFilter('formatDate', (date) => {
+    const d = date
+      ? new Date(date)
+      : new Date()
+    return dnt.format(d, 'MMM DD YYYY, HH:mm')
+  })
+
   // rebuild on CSS changes
   config.addWatchTarget('./src/_includes/css/')
 
