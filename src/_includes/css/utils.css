@@ -128,6 +128,10 @@
   font-size: .875rem !important;
 }
 
+.text-xs {
+  font-size: .75rem !important;
+}
+
 .uppercase {
   text-transform: uppercase !important;
 }

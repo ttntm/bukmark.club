@@ -1,0 +1,14 @@
+{
+  "new site front matter data": {
+    "scope": "markdown",
+    "prefix": "site",
+    "body": [
+      "---",
+      "title: $1",
+      "url: $2",
+      "author: $3",
+      "---"
+    ],
+    "description": "new site front matter data"
+  }
+}
