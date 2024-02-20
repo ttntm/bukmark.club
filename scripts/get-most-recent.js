@@ -4,7 +4,10 @@ const path = require('path')
 function getMostRecentFile(dir) {
   const files = orderRecentFiles(dir)
   return files.length
-    ? files[0]
+    ? {
+      total: files.length-1,
+      result: files[0]
+    }
     : undefined
 }
 
@@ -20,12 +23,13 @@ function orderRecentFiles(dir) {
 
 function main() {
   const {
-    file,
-    btime
+    total,
+    result
   } = getMostRecentFile('./src/directory/')
 
   fs.writeFileSync('./src/_data/info.json', JSON.stringify({
-    mostRecentUpdate: btime
+    directorySize: total,
+    mostRecentUpdate: result.btime
   }))
 }
 
