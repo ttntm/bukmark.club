@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A directory of websites from across the Internet.",
   "scripts": {
-    "deploy": "npm run stats && eleventy",
-    "serve": "npm run stats && eleventy --serve",
-    "stats": "rm -f ./src/_data/info.json && node ./scripts/get-most-recent.js",
+    "deploy": "eleventy",
+    "info": "rm -f ./src/_data/info.json && node ./scripts/get-most-recent.js",
+    "serve": "npm run info && eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
