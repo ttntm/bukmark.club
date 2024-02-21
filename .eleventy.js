@@ -28,7 +28,8 @@ module.exports = (config) => {
 
   // COLLECTIONS
   config.addCollection('directory', (collection) => {
-    // group directory entries alphabetically, based on the first lettler of their respective title
+    // sorts directory entries alphabetically and groups them based on the 
+    // first letter of their respective title
     return _.chain(collection.getFilteredByGlob('./src/directory/*.md'))
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
       .groupBy((item) => String(item.data.title).toUpperCase()[0])
