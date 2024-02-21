@@ -1,0 +1,24 @@
+<!-- Please read all instructions carefully. -->
+
+<!-- Select the appropriate category for what this PR is about -->
+This PR is:
+
+- [ ] Adding a new domain
+- [ ] Updating existing domain
+- [ ] Changing site data
+- [ ] Removing a listing
+- [ ] Website code changes (bukmark.club website)
+- [ ] Other/not listed
+
+<!-- Add your website in the line below -->
+Website (if applicable): https://example.com
+
+<!-- *Do not tick a checkbox if you haven't performed the listed action* -->
+
+I confirm that I have read the [Contributing Guidelines](https://github.com/ttntm/bukmark.club/blob/main/CONTRIBUTING.md).
+
+- [ ] Check to confirm
+
+When adding a site: I confirm that `./src/_data/info.json` was updated and included in this PR.
+
+- [ ] Check to confirm
