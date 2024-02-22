@@ -230,6 +230,20 @@ main {
   color: var(--blue);
 }
 
+.club {
+  border: 2px solid var(--blue);
+  color: var(--light);
+  padding: .25rem .5rem;
+  padding-top: .4rem;
+  text-decoration: none;
+}
+
+.club:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
 footer {
   background: rgba(5, 5, 5, .75);
   padding: 3rem 2rem;
