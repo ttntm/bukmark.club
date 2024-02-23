@@ -35,7 +35,6 @@ html, body {
 
 html {
   font-family: var(--font-mono);
-  line-height: 1.15;
   scroll-padding-top: 1rem;
 }
 
@@ -46,9 +45,7 @@ body {
 	color: var(--dark);
   display: flex;
   flex-direction: column;
-	font-family: var(--font-mono);
 	font-size: 1rem;
-	font-weight: 400;
 	line-height: 1.5;
 	margin: 0;
 }
@@ -98,16 +95,19 @@ i {
   font-style: italic;
 }
 
-a {
+a,
+button {
   transition: all .35s ease;
 }
 
-a, a:active {
+a, 
+a:active {
   color: var(--pink);
-}
-
-a:hover, a:focus {
-  color: var(--light);
+  
+  &:hover,
+  &:focus {
+    color: var(--light);
+  }
 }
 
 a:not(.logo) img {
@@ -119,8 +119,54 @@ a:not(.logo):hover img {
   opacity: .5;
 }
 
+.btn {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--light);
+  padding: .25rem .5rem;
+  padding-top: .4rem;
+  text-decoration: none;
+  
+  &:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+  }
+}
+
 details:hover {
   cursor: pointer;
+}
+
+label {
+  color: var(--blue);
+  font-size: 1.125rem;
+}
+
+input {
+  background: transparent;
+  border: 1px solid rgba(200, 200, 200, .25);
+  display: block;
+  border-radius: 0;
+  color: var(--light);
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  padding: .25rem .5rem;
+  padding-top: .4rem;
+  width: 100%;
+}
+
+.field-note {
+  margin-bottom: .5rem;
+}
+
+::placeholder {
+  color: var(--light);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-mono);
 }
 
 header,
@@ -171,12 +217,11 @@ header nav a {
   box-shadow: 0 2px 16px 0 rgba(31, 38, 135, .37);
   opacity: 1;
   transition: all .35s ease;
-}
-
-.logo:hover {
-  /* box-shadow: 0 0 40px 20px rgba(191, 117, 247, .57); */
-  opacity: .95;
-  box-shadow: 0 0 32px 8px var(--blue);
+  
+  &:hover {
+    opacity: .95;
+    box-shadow: 0 0 32px 8px var(--blue);
+  }
 }
 
 main {
@@ -219,29 +264,15 @@ main {
   font-size: .875rem;
   padding: 1.5rem;
   transition: all .35s ease;
-}
-
-.card:hover {
-  border: 1px solid rgba(200, 200, 200, .25);
-  box-shadow: 0 2px 4px 0 rgba(31, 38, 135, .37);
+  
+  &:hover {
+    border: 1px solid rgba(200, 200, 200, .25);
+    box-shadow: 0 2px 4px 0 rgba(31, 38, 135, .37);
+  }
 }
 
 .card h3 {
   color: var(--blue);
-}
-
-.club {
-  border: 2px solid var(--blue);
-  color: var(--light);
-  padding: .25rem .5rem;
-  padding-top: .4rem;
-  text-decoration: none;
-}
-
-.club:hover {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
 }
 
 footer {
@@ -252,13 +283,27 @@ footer {
 .outro,
 .outro a {
   color: #6c757d;
+  
+  & a:hover {
+    color: var(--blue);
+  }
 }
 
-.outro a:hover {
-  color: var(--blue);
+.form-listing {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .form-listing {
+    width: 576px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .form-listing {
+    width: 640px;
+  }
+
   .outro {
     width: 768px;
   }

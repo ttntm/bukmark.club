@@ -120,6 +120,14 @@
   margin-right: auto !important;
 }
 
+.shadow-highlight {
+  box-shadow: 0 2px 16px 0 var(--pink);
+
+  &:hover {
+    box-shadow: 0 2px 16px 0 var(--blue);
+  }
+}
+
 .text-center {
   text-align: center !important;
 }

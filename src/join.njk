@@ -1,0 +1,89 @@
+---
+title: Join
+description: Join the BUKMARK.CLUB.
+layout: base.njk
+permalink: /join/index.html
+eleventyExcludeFromCollections: true
+---
+<h1>Join the Club</h1>
+<p class="mb2">
+  You want your site listed? Simply fill this form:  
+</p>
+<form class="form-listing mx-auto" action="/join/success" method="POST" name="listing">
+  <input type="hidden" name="form-name" value="listing">
+  <div class="mb1">
+    <label class="block" for="ws">Website</label>
+    <span class="block field-note text-xs">Required; enter the <u>https://</u> URL of your collection of bookmarks/links.</span>
+    <input id="ws" name="Website" type="url" placeholder="https://xmpl.com/bookmarks" required>
+  </div>
+  <div class="mb1">
+    <label class="block" for="st">Site Title</label>
+    <span class="block field-note text-xs">Optional; we'll use your TLD as a fallback.</span>
+    <input id="st" name="Title" placeholder="Dimension C-137" type="text">
+  </div>
+  <input id="si" name="serious-inquiry" tabindex="-1" style="width: 0; height: 0; max-height: 0; line-height: 0; padding: 0; visibility: hidden;">
+  <div class="mb1">
+    <label class="block" for="sa">Author</label>
+    <span class="block field-note text-xs">Optional; name yourself. No fallback.</span>
+    <input id="sa" name="Author" placeholder="Elliot Alderson" type="text">
+  </div>
+  <div class="mb1">
+    <label class="block" for="btn">Button URL</label>
+    <span class="block field-note text-xs">Optional; link to your button. We will <i>not</i> hotlink it.</span>
+    <input id="btn" name="Button" placeholder="https://xmpl.com/my_button.png" type="url">
+  </div>
+  <div class="mb2">
+    <label class="block" for="eml">Email Address</label>
+    <span class="block field-note text-xs">Optional; if you want us to let you know what's happening with your request.</span>
+    <input id="eml" name="Email" placeholder="e11iot@xmpl.com" type="email">
+  </div>
+  <button class="btn inline-block h4 shadow-highlight" type="submit">Request Listing</button>
+</form>
+<p class="mb2">
+  You can also <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (see existing listings).  
+</p>
+<p>
+  Note: we reserve the explicit right <i>not</i> to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.
+</p>
+<h2 class="mt2">Self Service</h2>
+<p>
+  You can also add your site to the BUKMARK.CLUB <i>yourself</i>.
+  <br><br>
+  All you need to do is:
+</p>
+<ol class="mb2" style="list-style-type: decimal; padding-left: 3rem;">
+  <li class="mb1">
+    Make sure you're adding a personal website.
+  </li>
+  <li class="mb1">
+    Make sure the site offers a curated collection of bookmarks and/or links to other websites at a dedicated URL (i.e. /bookmarks, /links).
+  </li>
+  <li class="mb1">
+    Head over to <a href="https://github.com/ttntm/bukmark.club" rel="noopener" target="_blank">[our repository]</a>, clone it, make your changes and create a pull request to add your site. Please consult our <a href="https://github.com/ttntm/bukmark.club/blob/main/CONTRIBUTING.md" rel="noopener" target="_blank">[contributing guidelines]</a> for further information.
+  </li>
+  <li>
+    We will review you PR. If everything's fine, the site will be added to the directory.
+  </li>
+</ol>
+<h2 class="mt2">Link Us</h2>
+<p class="flex align-items-center flex-wrap gap1">
+  <span>
+    <b>Members</b>
+    <br>
+    Feel free to place this badge somewhere on your website:
+  </span>
+  <a href="/img/button_member.png">
+    <img class="block" src="/img/button_member.png" alt="Member button">
+  </a>
+</p>
+<p class="flex align-items-center flex-wrap gap1">
+  <span>
+    <b>Everyone else</b>
+    <br>
+    Please use this button for links to our directory:
+  </span>
+  <a href="/img/button_url.png">
+    <img class="block" src="/img/button_url.png" alt="URL button">
+  </a>
+</p>
+<p class="mt2"><i>Please upload these images to your own server.</i></p>

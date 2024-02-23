@@ -6,15 +6,11 @@
   </div>
   <nav>
     <ul class="flex align-items-center justify-content-center gap1">
-      <li>
-        <a href="/">[Home]</a>
-      </li>
-      <li>
-        <a href="/directory">[Directory]</a>
-      </li>
-      <li>
-        <a href="https://github.com/ttntm/bukmark.club" rel="noopener" target="_blank">[Source]</a>
-      </li>
+      {% for item in site.menu %}
+        <li>
+          <a href="{{ item.url }}">[{{ item.label }}]</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 </header>

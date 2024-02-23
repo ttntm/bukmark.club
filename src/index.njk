@@ -15,68 +15,31 @@ layout: base.njk
   {% endfor %}
   <li class="flex justify-content-center" style="width: 100%; height: 100%;">
     <span style="align-self: center;">
-      <a class="h4" href="/directory">[Browse&nbsp;Directory]</a>
+      <a class="btn h3 shadow-highlight" href="/directory" title="Do it... Now!">Browse&nbsp;Directory</a>
     </span>
   </li>
 </ul>
 {% include "directoryInfo.njk" %}
-<h2 class="mt2">Join the Club</h2>
+<h2 class="mt2">Get Listed</h2>
 <p>
-  If you're interested in getting your site added to the BUKMARK.CLUB, all you need to do is:
+  You can find out how to get your site listed in this directory here:
+  <br><br>
+  <a class="btn h4 shadow-highlight" href="/join">Join the Club</a>
 </p>
-<ol class="my1" style="list-style-type: decimal; padding-left: 3rem;">
-  <li class="mb1">
-    Make sure you're adding a personal website.
-  </li>
-  <li class="mb1">
-    Make sure the site offers a curated collection of bookmarks and/or links to other websites at a dedicated URL (i.e. /bookmarks, /links).
-  </li>
-  <li class="mb1">
-    Head over to <a href="https://github.com/ttntm/bukmark.club" rel="noopener" target="_blank">[our repository]</a>, clone it, make your changes and create a pull request to add your site. Please consult our <a href="https://github.com/ttntm/bukmark.club/blob/main/CONTRIBUTING.md" rel="noopener" target="_blank">[contributing guidelines]</a> for further information.
-  </li>
-  <li>
-    We will review you PR. If everything's fine, the site will be added to the directory.
-  </li>
-</ol>
-<p>
-  You can also <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (see existing listings).
-</p>
-<p>
-  Note: we reserve the explicit right <i>not</i> to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.
-</p>
-<h3 class="mt2">Link Us</h3>
-<p class="flex align-items-center flex-wrap gap1">
-  <span>
-    <b>Members</b>
-    <br>
-    Feel free to place this badge somewhere on your website:
-  </span>
-  <a href="/img/button_member.png">
-    <img class="block" src="/img/button_member.png" alt="Member button">
-  </a>
-</p>
-<p class="flex align-items-center flex-wrap gap1">
-  <span>
-    <b>Everyone else</b>
-    <br>
-    Please use this button for links to our directory:
-  </span>
-  <a href="/img/button_url.png">
-    <img class="block" src="/img/button_url.png" alt="URL button">
-  </a>
-</p>
-<p class="mt2"><i>Please upload these images to your own server.</i></p>
 <h2 class="mt2">Contact Us</h2>
 <p>
   Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should experience any issues with this website.
 </p>
 <h2 class="mt2">Affiliates</h2>
+<p>
+  This website is listed at:
+</p>
 <ul class="flex align-items-center gap1 mb1">
   <li class="block">
-    <a class="club inline-block text-sm" href="https://1mb.club" target="_blank" rel="noopener">1MB Club</a>
+    <a class="btn inline-block text-sm" href="https://1mb.club" target="_blank" rel="noopener">1MB Club</a>
   </li>
   <li class="block">
-    <a class="club inline-block text-sm" href="https://darktheme.club" target="_blank" rel="noopener">Darktheme Club</a>
+    <a class="btn inline-block text-sm" href="https://darktheme.club" target="_blank" rel="noopener">Darktheme Club</a>
   </li>
 </ul>
 <a class="inline-block mb1" title="Visit the 250KB Club page" href="https://250kb.club/bukmark-club" rel="noopener" target="_blank">

@@ -3,5 +3,19 @@
   "baseUrl": "https://bukmark.club",
   "description": "A collection of web pages from across the Internet that have a curated collection of bookmarks and/or links.",
   "title": "Homepage",
-  "email": "webmaster[@]bukmark[.]club"
+  "email": "webmaster[@]bukmark[.]club",
+  "menu": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Directory",
+      "url": "/directory"
+    },
+    {
+      "label": "Join",
+      "url": "/join"
+    }
+  ]
 }
