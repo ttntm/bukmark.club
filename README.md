@@ -30,6 +30,7 @@ Add your website's data in your `*.md` file using the following properties:
 
 ### Other Ways to Add Your Website
 
+- Use the submission form at [bukmark.club/join/](https://bukmark.club/join/)
 - [Open an issue](https://github.com/ttntm/bukmark.club/issues) in this repository
 - Email `webmaster[@]bukmark[.]club` and include all necessary information
 
