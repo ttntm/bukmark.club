@@ -13,7 +13,8 @@
   --pink: #bf75f7;
   --blue: #00b0ec;
 	--font-sans: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-	--font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	/* --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
+	--font-mono: monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New';
 }
 
 *,
@@ -52,7 +53,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: slateblue;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -124,7 +125,7 @@ a:not(.logo):hover img {
   border: 2px solid var(--blue);
   color: var(--light);
   padding: .25rem .5rem;
-  padding-top: .4rem;
+  /* padding-top: .4rem; */
   text-decoration: none;
   
   &:hover {
@@ -152,7 +153,7 @@ input {
   font-family: var(--font-mono);
   font-size: .875rem;
   padding: .25rem .5rem;
-  padding-top: .4rem;
+  /* padding-top: .4rem; */
   width: 100%;
 }
 
@@ -320,5 +321,13 @@ footer nav a {
 @media screen and (min-width: 576px) {
   .mobile-column {
     flex-direction: row;
+  }
+}
+
+/* safari fixes */
+@supports (-webkit-touch-callout: none) {
+  /* disable input:focus zooming that happens for font sizes <16px */
+  input {
+    font-size: 16px !important;
   }
 }
