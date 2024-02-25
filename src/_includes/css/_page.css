@@ -144,7 +144,8 @@ label {
   font-size: 1.125rem;
 }
 
-input {
+input,
+textarea {
   background: transparent;
   border: 1px solid rgba(200, 200, 200, .25);
   display: block;
@@ -155,6 +156,11 @@ input {
   padding: .25rem .5rem;
   /* padding-top: .4rem; */
   width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 128px;
 }
 
 .field-note {
@@ -295,13 +301,13 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .form-listing {
+  .narrow {
     width: 576px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .form-listing {
+  .narrow {
     width: 640px;
   }
 

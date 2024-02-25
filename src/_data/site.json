@@ -16,6 +16,10 @@
     {
       "label": "Join",
       "url": "/join"
+    },
+    {
+      "label": "Guestbuk",
+      "url": "/guestbuk"
     }
   ]
 }

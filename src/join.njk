@@ -9,9 +9,9 @@ eleventyExcludeFromCollections: true
 <p class="mb2">
   You want your site listed? Simply fill this form:  
 </p>
-<form class="form-listing mx-auto" action="/join/success" method="POST" name="listing" netlify-honeypot="serious-inquiry" netlify>
-  <input type="hidden" name="form-name" value="listing">
-  <input type="hidden" name="subject" value="New Listing Request (%{submissionId})">
+<form class="form-listing narrow mx-auto" action="/join/success" method="POST" name="listing" netlify-honeypot="serious-inquiry" netlify>
+  <input name="form-name" type="hidden" value="listing">
+  <input name="subject" type="hidden" value="New Listing Request (%{submissionId})">
   <div class="mb1">
     <label class="block" for="ws">Website</label>
     <span class="block field-note text-xs">Required; enter the <u>https://</u> URL of your collection of bookmarks/links.</span>
@@ -20,23 +20,23 @@ eleventyExcludeFromCollections: true
   <div class="mb1">
     <label class="block" for="st">Site Title</label>
     <span class="block field-note text-xs">Optional; we'll use your TLD as a fallback.</span>
-    <input id="st" name="title" placeholder="Dimension C-137" type="text">
+    <input id="st" name="title" type="text" placeholder="Dimension C-137">
   </div>
-  <input id="si" name="serious-inquiry" tabindex="-1" style="width: 0; height: 0; max-height: 0; line-height: 0; padding: 0; visibility: hidden;">
+  <input id="si" name="serious-inquiry" type="text" tabindex="-1" style="width: 0; height: 0; max-height: 0; line-height: 0; padding: 0; visibility: hidden;">
   <div class="mb1">
     <label class="block" for="sa">Author</label>
     <span class="block field-note text-xs">Optional; name yourself. No fallback.</span>
-    <input id="sa" name="name" placeholder="Elliot Alderson" type="text">
+    <input id="sa" name="name" type="text" placeholder="Elliot Alderson">
   </div>
   <div class="mb1">
     <label class="block" for="btn">Button URL</label>
     <span class="block field-note text-xs">Optional; link to your button. We will <i>not</i> hotlink it.</span>
-    <input id="btn" name="button" placeholder="https://xmpl.com/my_button.png" type="url">
+    <input id="btn" name="button" type="url" placeholder="https://xmpl.com/my_button.png">
   </div>
   <div class="mb2">
     <label class="block" for="eml">Email Address</label>
     <span class="block field-note text-xs">Optional; if you want us to let you know what's happening with your request.</span>
-    <input id="eml" name="email" placeholder="e11iot@xmpl.com" type="email">
+    <input id="eml" name="email" type="email" placeholder="e11iot@xmpl.com">
   </div>
   <button class="btn inline-block h4 shadow-highlight" type="submit" style="font-weight: 400;">Request Listing</button>
 </form>
