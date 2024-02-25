@@ -1,0 +1,59 @@
+---
+title: Guestbuk
+description: Sign out guestbuk.
+layout: base.njk
+permalink: /guestbuk/index.html
+eleventyExcludeFromCollections: true
+---
+<h1>Guestbuk</h1>
+<p class="mb2">
+  You can sign our fabulous <i>serverless</i> Guestbuk using the form below.
+</p>
+<form class="narrow mx-auto" action="/guestbuk/success" method="POST" name="guestbuk" netlify-honeypot="serious-inquiry" netlify>
+  <input type="hidden" name="form-name" value="listing">
+  <input type="hidden" name="subject" value="New Guestbuk Entry (%{submissionId})">
+  <div class="mb1">
+    <label class="block" for="sa">Name</label>
+    <span class="block field-note text-xs">Required; tell us who you are.</span>
+    <input id="sa" name="name" type="text" placeholder="Elliot Alderson" required>
+  </div>
+  <div class="flex justify-content-between mobile-column gap1 mb1">
+    <div class="w100">
+      <label class="block" for="ws">Website</label>
+      <span class="block field-note text-xs">Optional; we'll link to your website if you fill this field.</span>
+      <input id="ws" name="website" type="url" placeholder="https://xmpl.com">
+    </div>
+    <div class="w100">
+      <label class="block" for="eml">Email Address</label>
+      <span class="block field-note text-xs">Required; won't ever be displayed or used in any way.</span>
+      <input id="eml" name="email" type="email" placeholder="e11iot@xmpl.com">
+    </div>
+  </div>
+  <div class="mb1">
+    <label class="block" for="msg" style="margin-bottom: .5rem;">Message</label>
+    <textarea id="msg" class="w100 mb2" name="message" placeholder="A new guestbuk entry..." required></textarea>
+  </div>
+  <button class="btn inline-block h4 shadow-highlight" type="submit" style="font-weight: 400;">Send Message</button>
+</form>
+{% if guestbuk | length %}
+  <h2 class="mb2" style="margin-top: 4rem;">Entries</h2>
+  <section class="narrow mx-auto">
+    {% for item in guestbuk %}
+      <article class="card">
+        <div class="flex justify-content-between flex-wrap-mobile pb1 mb1" style="border-bottom: 1px solid rgba(200, 200, 200, .25);">
+          <p class="m0">
+            <a href="{{ item.Website }}" rel="noopener" target="_blank">
+              {{ item.Author }}
+            </a>
+          </p>
+          <p class="text-xs m0">
+            <time>{{ item.created | formatDate }}</time>
+          </p>
+        </div>
+        <p class="m0">
+          {{ item.Title }}
+        </p>
+      </article>
+    {% endfor %}
+  </section>
+{% endif %}

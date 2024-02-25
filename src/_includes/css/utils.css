@@ -22,8 +22,19 @@
   justify-content: center !important;
 }
 
-.flex-wrap {
+.flex-wrap,
+.flex-wrap-mobile {
   flex-wrap: wrap !important;
+}
+
+@media screen and (min-width: 576px) {
+  .flex-wrap-mobile {
+    flex-wrap: nowrap;
+  }
+}
+
+.w100 {
+  width: 100%;
 }
 
 .gap1 {
