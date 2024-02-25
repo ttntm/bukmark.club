@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   You can sign our fabulous <i>serverless</i> Guestbuk using the form below.
 </p>
 <form class="narrow mx-auto" action="/guestbuk/success" method="POST" name="guestbuk" netlify-honeypot="serious-inquiry" netlify>
-  <input type="hidden" name="form-name" value="listing">
+  <input type="hidden" name="form-name" value="guestbuk">
   <input type="hidden" name="subject" value="New Guestbuk Entry (%{submissionId})">
   <div class="mb1">
     <label class="block" for="sa">Name</label>
@@ -42,8 +42,8 @@ eleventyExcludeFromCollections: true
       <article class="card">
         <div class="flex justify-content-between flex-wrap-mobile pb1 mb1" style="border-bottom: 1px solid rgba(200, 200, 200, .25);">
           <p class="m0">
-            <a href="{{ item.Website }}" rel="noopener" target="_blank">
-              {{ item.Author }}
+            <a href="{{ item.website }}" rel="noopener" target="_blank">
+              {{ item.name }}
             </a>
           </p>
           <p class="text-xs m0">
@@ -51,7 +51,7 @@ eleventyExcludeFromCollections: true
           </p>
         </div>
         <p class="m0">
-          {{ item.Title }}
+          {{ item.message }}
         </p>
       </article>
     {% endfor %}
