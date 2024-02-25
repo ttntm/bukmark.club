@@ -15,30 +15,30 @@ eleventyExcludeFromCollections: true
   <div class="mb1">
     <label class="block" for="ws">Website</label>
     <span class="block field-note text-xs">Required; enter the <u>https://</u> URL of your collection of bookmarks/links.</span>
-    <input id="ws" name="Website" type="url" placeholder="https://xmpl.com/bookmarks" required>
+    <input id="ws" name="website" type="url" placeholder="https://xmpl.com/bookmarks" required>
   </div>
   <div class="mb1">
     <label class="block" for="st">Site Title</label>
     <span class="block field-note text-xs">Optional; we'll use your TLD as a fallback.</span>
-    <input id="st" name="Title" placeholder="Dimension C-137" type="text">
+    <input id="st" name="title" placeholder="Dimension C-137" type="text">
   </div>
   <input id="si" name="serious-inquiry" tabindex="-1" style="width: 0; height: 0; max-height: 0; line-height: 0; padding: 0; visibility: hidden;">
   <div class="mb1">
     <label class="block" for="sa">Author</label>
     <span class="block field-note text-xs">Optional; name yourself. No fallback.</span>
-    <input id="sa" name="Author" placeholder="Elliot Alderson" type="text">
+    <input id="sa" name="name" placeholder="Elliot Alderson" type="text">
   </div>
   <div class="mb1">
     <label class="block" for="btn">Button URL</label>
     <span class="block field-note text-xs">Optional; link to your button. We will <i>not</i> hotlink it.</span>
-    <input id="btn" name="Button" placeholder="https://xmpl.com/my_button.png" type="url">
+    <input id="btn" name="button" placeholder="https://xmpl.com/my_button.png" type="url">
   </div>
   <div class="mb2">
     <label class="block" for="eml">Email Address</label>
     <span class="block field-note text-xs">Optional; if you want us to let you know what's happening with your request.</span>
-    <input id="eml" name="Email" placeholder="e11iot@xmpl.com" type="email">
+    <input id="eml" name="email" placeholder="e11iot@xmpl.com" type="email">
   </div>
-  <button class="btn inline-block h4 shadow-highlight" type="submit">Request Listing</button>
+  <button class="btn inline-block h4 shadow-highlight" type="submit" style="font-weight: 400;">Request Listing</button>
 </form>
 <p class="mb2">
   You can also <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (see existing listings).  
