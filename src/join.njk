@@ -11,6 +11,7 @@ eleventyExcludeFromCollections: true
 </p>
 <form class="form-listing mx-auto" action="/join/success" method="POST" name="listing" netlify-honeypot="serious-inquiry" netlify>
   <input type="hidden" name="form-name" value="listing">
+  <input type="hidden" name="subject" value="New Listing Request (%{submissionId})">
   <div class="mb1">
     <label class="block" for="ws">Website</label>
     <span class="block field-note text-xs">Required; enter the <u>https://</u> URL of your collection of bookmarks/links.</span>
