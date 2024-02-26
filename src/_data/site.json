@@ -6,6 +6,10 @@
   "email": "webmaster[@]bukmark[.]club",
   "menu": [
     {
+      "label": "Home",
+      "url": "/"
+    },
+    {
       "label": "Directory",
       "url": "/directory"
     },

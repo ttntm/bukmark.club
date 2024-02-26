@@ -27,9 +27,17 @@
   flex-wrap: wrap !important;
 }
 
+.mobile-hidden {
+  display: none;
+}
+
 @media screen and (min-width: 576px) {
   .flex-wrap-mobile {
     flex-wrap: nowrap;
+  }
+
+  .mobile-hidden {
+    display: initial;
   }
 }
 

@@ -7,7 +7,7 @@
   <nav>
     <ul class="flex align-items-center justify-content-center flex-wrap-mobile gap1">
       {% for item in site.menu %}
-        <li>
+        <li {% if loop.first %}class="mobile-hidden"{% endif %}>
           <a href="{{ item.url }}">[{{ item.label }}]</a>
         </li>
       {% endfor %}
