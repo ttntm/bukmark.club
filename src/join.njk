@@ -33,15 +33,19 @@ eleventyExcludeFromCollections: true
     <span class="block field-note text-xs">Optional; link to your button. We will <i>not</i> hotlink it.</span>
     <input id="btn" name="button" type="url" placeholder="https://xmpl.com/my_button.png">
   </div>
-  <div class="mb2">
+  <div class="mb1">
     <label class="block" for="eml">Email Address</label>
     <span class="block field-note text-xs">Optional; if you want us to let you know what's happening with your request.</span>
     <input id="eml" name="email" type="email" placeholder="e11iot@xmpl.com">
   </div>
+  <div class="mb2">
+    <label class="block" for="msg" style="margin-bottom: .5rem;">Message</label>
+    <textarea id="msg" class="w100 mb2" name="message" placeholder="Optional; anything else you'd like to add to this request..."></textarea>
+  </div>
   <button class="btn inline-block h4 shadow-highlight" type="submit" style="font-weight: 400;">Request Listing</button>
 </form>
 <p class="mb2">
-  You can also <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (see existing listings).  
+  Alternatively, you can <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (based on the form fields above).  
 </p>
 <p>
   Note: we reserve the explicit right <i>not</i> to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.
