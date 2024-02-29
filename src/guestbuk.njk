@@ -39,7 +39,7 @@ eleventyExcludeFromCollections: true
   <h2 class="mb2" style="margin-top: 4rem;">Entries</h2>
   <section class="narrow mx-auto">
     {% for item in guestbuk %}
-      <article class="card">
+      <article class="card {% if not loop.last %} mb2{% endif %}">
         <div class="flex justify-content-between flex-wrap-mobile pb1 mb1" style="border-bottom: 1px solid rgba(200, 200, 200, .25);">
           <p class="m0">
             <a href="{{ item.website }}" rel="noopener" target="_blank">

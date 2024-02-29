@@ -1,7 +1,7 @@
 const config = require('dotenv').config()
 const eleventyFetch = require('@11ty/eleventy-fetch')
 
-const whitelist = [1]
+const whitelist = [1, 3]
 
 module.exports = async function() {
   let reqUrl = `https://api.netlify.com/api/v1/forms/${process.env.NTL_GUESTBUK}/submissions`
