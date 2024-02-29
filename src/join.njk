@@ -7,14 +7,14 @@ eleventyExcludeFromCollections: true
 ---
 <h1>Join the Club</h1>
 <p class="mb2">
-  You want your site listed? Simply fill this form:  
+  You want your site listed? Simply fill this form:
 </p>
 <form class="form-listing narrow mx-auto" action="/join/success" method="POST" name="listing" netlify-honeypot="serious-inquiry" netlify>
   <input name="form-name" type="hidden" value="listing">
   <input name="subject" type="hidden" value="New Listing Request (%{submissionId})">
   <div class="mb1">
     <label class="block" for="ws">Website</label>
-    <span class="block field-note text-xs">Required; enter the <u>https://</u> URL of your collection of bookmarks/links.</span>
+    <span class="block field-note text-xs">Required; enter the URL of your collection of bookmarks/links.</span>
     <input id="ws" name="website" type="url" placeholder="https://xmpl.com/bookmarks" required>
   </div>
   <div class="mb1">
@@ -30,7 +30,7 @@ eleventyExcludeFromCollections: true
   </div>
   <div class="mb1">
     <label class="block" for="btn">Button URL</label>
-    <span class="block field-note text-xs">Optional; link your button, will <i>not</i> be hotlinked.</span>
+    <span class="block field-note text-xs">Optional; link your button. Will <i>not</i> be hotlinked.</span>
     <input id="btn" name="button" type="url" placeholder="https://xmpl.com/my_button.png">
   </div>
   <div class="mb1">
@@ -45,7 +45,7 @@ eleventyExcludeFromCollections: true
   <button class="btn inline-block h4 shadow-highlight" type="submit" style="font-weight: 400;">Request Listing</button>
 </form>
 <p class="mb2">
-  Alternatively, you can <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (based on the form fields above).  
+  Alternatively, you can <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=Submission">[email us]</a> to have your website listed. Please include all necessary information (based on the form fields above).
 </p>
 <p>
   Note: we reserve the explicit right <i>not</i> to add submissions to the directory, and to remove submissions at any time, if we deem them unsuitable in any way.
