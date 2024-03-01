@@ -3,6 +3,8 @@
 .cache/
 public/
 
+functions/pages.json
+
 # Logs
 logs
 *.log

@@ -1,0 +1,11 @@
+---
+permalink: '../functions/pages.json'
+eleventyExcludeFromCollections: true
+---
+[
+  {%- for letter, letterPages in collections.directory -%}
+    {%- for page in letterPages -%}
+      "{{ page.data.url }}"{% if not loop.last %},{% endif %}
+    {%- endfor -%}{% if not loop.last %},{% endif %}
+  {%- endfor -%}
+]
