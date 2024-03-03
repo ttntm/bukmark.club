@@ -101,10 +101,10 @@ button {
   transition: all .35s ease;
 }
 
-a, 
+a,
 a:active {
   color: var(--pink);
-  
+
   &:hover,
   &:focus {
     color: var(--light);
@@ -127,7 +127,7 @@ a:not(.logo):hover img {
   padding: .25rem .5rem;
   /* padding-top: .4rem; */
   text-decoration: none;
-  
+
   &:hover {
     background: var(--blue);
     border-color: var(--blue);
@@ -205,7 +205,7 @@ footer {
 }
 
 header {
-  background: linear-gradient(to bottom right, rgba(0,176,236,1) 0%, rgba(191,117,247,1) 50%, rgba(252,176,69,1) 100%); 
+  background: linear-gradient(to bottom right, rgba(0,176,236,1) 0%, rgba(191,117,247,1) 50%, rgba(252,176,69,1) 100%);
 }
 
 header nav {
@@ -224,7 +224,7 @@ header nav a {
   box-shadow: 0 2px 16px 0 rgba(31, 38, 135, .37);
   opacity: 1;
   transition: all .35s ease;
-  
+
   &:hover {
     opacity: .95;
     box-shadow: 0 0 32px 8px var(--blue);
@@ -271,7 +271,7 @@ main {
   font-size: .875rem;
   padding: 1.5rem;
   transition: all .35s ease;
-  
+
   &:hover {
     border: 1px solid rgba(200, 200, 200, .25);
     box-shadow: 0 2px 4px 0 rgba(31, 38, 135, .37);
@@ -290,7 +290,7 @@ footer {
 .outro,
 .outro a {
   color: #6c757d;
-  
+
   & a:hover {
     color: var(--blue);
   }
@@ -309,6 +309,10 @@ footer {
 @media screen and (min-width: 1200px) {
   .narrow {
     width: 640px;
+  }
+
+  .logo {
+    margin: 3rem auto;
   }
 
   .outro {
