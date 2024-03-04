@@ -43,9 +43,13 @@ eleventyExcludeFromCollections: true
       <article class="card {% if not loop.last %} mb2{% endif %}">
         <div class="flex justify-content-between flex-wrap-mobile pb1 mb1" style="border-bottom: 1px solid rgba(200, 200, 200, .25);">
           <p class="m0">
-            <a href="{{ item.website }}" rel="noopener" target="_blank">
+            {% if item.website %}
+              <a href="{{ item.website }}" rel="noopener" target="_blank">
+                {{ item.name }}
+              </a>
+            {% else %}
               {{ item.name }}
-            </a>
+            {% endif %}
           </p>
           <p class="text-xs m0">
             <time>{{ item.created | formatDate }}</time>
