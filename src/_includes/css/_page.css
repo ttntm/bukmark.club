@@ -250,12 +250,20 @@ main {
 }
 
 @media screen and (min-width: 576px) {
+  .directory-index {
+    max-width: 50%;
+  }
+
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .directory-index {
+    max-width: 40%;
+  }
+
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
