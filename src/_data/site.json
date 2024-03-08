@@ -21,5 +21,19 @@
       "label": "Guestbuk",
       "url": "/guestbuk"
     }
+  ],
+  "affiliates": [
+    {
+      "name": "512KB Club",
+      "url": "https://512kb.club"
+    },
+    {
+      "name": "1MB Club",
+      "url": "https://1mb.club"
+    },
+    {
+      "name": "Darktheme Club",
+      "url": "https://darktheme.club"
+    }
   ]
 }
