@@ -35,5 +35,27 @@
       "name": "Darktheme Club",
       "url": "https://darktheme.club"
     }
+  ],
+  "milestones": [
+    {
+      "title": "1st site",
+      "text": "Feb. 18th '24"
+    },
+    {
+      "title": "4th / 8th site",
+      "text": "Feb. 19th '24"
+    },
+    {
+      "title": "16th site",
+      "text": "Feb. 20th '24"
+    },
+    {
+      "title": "32nd site",
+      "text": "Feb. 21st '24"
+    },
+    {
+      "title": "64th site",
+      "text": "Mar. 10th '24"
+    }
   ]
 }

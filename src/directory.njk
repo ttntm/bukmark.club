@@ -5,45 +5,57 @@ layout: base.njk
 permalink: /directory/index.html
 eleventyExcludeFromCollections: true
 ---
-<h1>Directory</h1>
-<p>
-  This is our directory of <b>{{ info.directorySize }} wonderful websites</b> that provide a curated collection of bookmarks and/or links to other websites.
-</p>
-{% include "directoryInfo.njk" %}
-<details class="mb1">
-  <summary>
-    <b>Disclaimer</b>
-  </summary>
-  <ul style="list-style-type: square; padding-left: 2rem;">
-    <li class="mb1">
-      We do <i>not</i> accept any responsibility for any linked site's content.
-    </li>
-    <li class="mb1">
-      We try to take good care of this directory, but this is the internet - any listed website can change at any moment. Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should find broken links or discover any other issues with a site listed below.
-    </li>
-    <li>
-      If your site appears in this directory and you're unhappy with the listing or its inclusion, please <a href="mailto:{{ site.email }}?subject=Update or Removal of Site:">[let us know]</a>.
-    </li>
-  </ul>
-</details>
-<h2>Index</h2>
-<ul class="directory-index flex flex-wrap gap1 mb2">
-  {% for letter, letterPages in collections.directory %}
-    <li>
-      <a href="#section-{{ letter }}">[{{ letter }}]</a>
-    </li>
-  {% endfor %}
-</ul>
-{% for letter, letterPages in collections.directory %}
-  <article class="{% if not loop.last %}mb2{% endif %}">
-    <div class="flex align-items-center justify-content-between" style="border-bottom: 1px solid slateblue;">
-      <h2 id="section-{{ letter }}" class="m0" style="border: 0;">[{{ letter }}]</h2>
-      <a class="block" href="#top" title="Back to top">[^]</a>
-    </div>
-    <ul class="grid grid3 gap2 my1">
-      {% for page in letterPages %}
-        {% include "card.njk" %}
-      {% endfor %}
+<section>
+  <h1>Directory</h1>
+  <p>
+    This is our directory of <b>{{ info.directorySize }} wonderful websites</b> that provide a curated collection of bookmarks and/or links to other websites. See <a href="#milestones">[Milestones]</a> for more info on the growth of this directory.
+  </p>
+  {% include "directoryInfo.njk" %}
+  <details class="mb1">
+    <summary>
+      <b>Disclaimer</b>
+    </summary>
+    <ul style="list-style-type: square; padding-left: 2rem;">
+      <li class="mb1">
+        We do <i>not</i> accept any responsibility for any linked site's content.
+      </li>
+      <li class="mb1">
+        We try to take good care of this directory, but this is the internet - any listed website can change at any moment. Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should find broken links or discover any other issues with a site listed below.
+      </li>
+      <li>
+        If your site appears in this directory and you're unhappy with the listing or its inclusion, please <a href="mailto:{{ site.email }}?subject=Update or Removal of Site:">[let us know]</a>.
+      </li>
     </ul>
-  </article>
-{% endfor %}
+  </details>
+  <h2>Index</h2>
+  <ul class="directory-index flex flex-wrap gap1 mb2">
+    {% for letter, letterPages in collections.directory %}
+      <li>
+        <a href="#section-{{ letter }}">[{{ letter }}]</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% for letter, letterPages in collections.directory %}
+    <article class="{% if not loop.last %}mb2{% endif %}">
+      <div class="flex align-items-center justify-content-between" style="border-bottom: 1px solid slateblue;">
+        <h2 id="section-{{ letter }}" class="m0" style="border: 0;">[{{ letter }}]</h2>
+        <a class="block" href="#top" title="Back to top">[^]</a>
+      </div>
+      <ul class="grid grid3 gap2 my1">
+        {% for page in letterPages %}
+          {% include "card.njk" %}
+        {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</section>
+<section id="milestones" class="mt2">
+  <h2>Milestones</h2>
+  <ul class="text-sm" style="list-style-type: square; padding-left: 2rem;">
+    {% for item in site.milestones %}
+      <li>
+        <b>{{ item.title }}</b>: {{ item.text }}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
