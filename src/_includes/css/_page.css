@@ -104,9 +104,11 @@ button {
 a,
 a:active {
   color: var(--pink);
+  text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:not(:has(img)):hover,
+  &:not(:has(img)):focus {
+    background: linear-gradient(to bottom right, var(--blue), color-mix(in srgb, var(--blue), transparent 80%));
     color: var(--light);
   }
 }
@@ -300,7 +302,7 @@ footer {
   color: #6c757d;
 
   & a:hover {
-    color: var(--blue);
+    color: var(--white);
   }
 }
 
