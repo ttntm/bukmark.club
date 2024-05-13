@@ -21,6 +21,7 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
+    "@antfu/ni": "^0.21.12",
     "cssnano": "^5.1.14",
     "date-and-time": "^1.0.0",
     "dotenv": "^16.4.5",
