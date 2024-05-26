@@ -34,7 +34,7 @@ layout: base.njk
 </p>
 <h2 class="mt2">Contact Us</h2>
 <p>
-  Please <a href="https://github.com/ttntm/bukmark.club/issues" rel="noopener" target="_blank">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should experience any issues with this website.
+  Please <a class="ext" href="https://github.com/ttntm/bukmark.club/issues">[file an issue]</a> or <a href="mailto:{{ site.email }}?subject=The_Issue">[email us]</a> if you should experience any issues with this website.
 </p>
 <h2 class="mt2">Affiliates</h2>
 <p>
@@ -44,12 +44,12 @@ layout: base.njk
   <ul class="flex flex-wrap gap1">
     {% for item in site.affiliates %}
       <li class="block">
-        <a class="btn inline-block text-sm" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a>
+        <a class="btn ext inline-block text-sm" href="{{ item.url }}">{{ item.name }}</a>
       </li>
     {% endfor %}
   </ul>
   <p class="m0">
-    <a class="inline-block" title="Visit the 250KB Club page" href="https://250kb.club/bukmark-club" rel="noopener" target="_blank">
+    <a class="inline-block" title="Visit the 250KB Club page" href="https://250kb.club/bukmark-club">
       <img
         alt="badge: proud member of the 250KB Club"
         class="block"
@@ -59,7 +59,7 @@ layout: base.njk
     </a>
   </p>
   <p class="m0">
-    <a class="inline-block" title="Visit the no-JS Club" href="https://no-js.club" rel="noopener" target="_blank">
+    <a class="inline-block" title="Visit the no-JS Club" href="https://no-js.club">
       <img
         alt="badge: proud member of the no-JS Club"
         class="block"
@@ -72,6 +72,6 @@ layout: base.njk
 <p class="">---</p>
 <p class="m0">
   <a class="btn inline-block text-sm" href="https://webring.dinhe.net/prev/https://bukmark.club">&lt;</a>&nbsp;
-  <a class="btn inline-block text-sm" href="https://webring.dinhe.net">Retronaut Webring</a>&nbsp;
+  <a class="btn ext inline-block text-sm" href="https://webring.dinhe.net">Retronaut Webring</a>&nbsp;
   <a class="btn inline-block text-sm" href="https://webring.dinhe.net/next/https://bukmark.club">&gt;</a>
 </p>

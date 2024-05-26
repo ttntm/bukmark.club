@@ -44,7 +44,7 @@ eleventyExcludeFromCollections: true
         <div class="flex justify-content-between flex-wrap-mobile pb1 mb1" style="border-bottom: 1px solid rgba(200, 200, 200, .25);">
           <p class="m0">
             {% if item.website %}
-              <a href="{{ item.website }}" rel="noopener" target="_blank">
+              <a class="ext" href="{{ item.website }}">
                 {{ item.name }}
               </a>
             {% else %}
