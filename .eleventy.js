@@ -4,6 +4,11 @@ const dnt = require('date-and-time')
 const htmlmin = require('html-minifier')
 const markdownIt = require('markdown-it')
 
+const isProdDeployment = Boolean(
+  process.env.ELEVENTY_RUN_MODE
+  && process.env.ELEVENTY_RUN_MODE === 'build'
+)
+
 module.exports = (config) => {
   config.addFilter('formatDate', (date) => {
     const d = date
@@ -28,7 +33,7 @@ module.exports = (config) => {
 
   // COLLECTIONS
   config.addCollection('directory', (collection) => {
-    // sorts directory entries alphabetically and groups them based on the 
+    // sorts directory entries alphabetically and groups them based on the
     // first letter of their respective title
     return _.chain(collection.getFilteredByGlob('./src/directory/*.md'))
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
@@ -46,17 +51,19 @@ module.exports = (config) => {
   config.addPassthroughCopy({ './src/static/': '/' })
 
   // TRANSFORM -- Minify HTML Output
-  config.addTransform('htmlmin', (content, outputPath) => {
-    if (outputPath && outputPath.endsWith('.html')) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      })
-      return minified
-    }
-    return content
-  })
+  if (isProdDeployment) {
+    config.addTransform('htmlmin', (content, outputPath) => {
+      if (outputPath && outputPath.endsWith('.html')) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        })
+        return minified
+      }
+      return content
+    })
+  }
 
   return {
     dir: {
