@@ -4,7 +4,7 @@
     <p class="m0">Author: {{ page.data.author }}</p>
   {% endif %}
   <p class="flex m0">
-    <a class="ext" class="block" href="{{ page.data.url }}">
+    <a class="ext" class="block" href="{{ page.data.url }}" rel="nofollow noopener">
       {% if page.data.button %}
         {% set btn = ['/img/directory/', page.data.button] | join %}
       {% else %}
