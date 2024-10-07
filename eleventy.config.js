@@ -1,15 +1,14 @@
-// PKGS
-const _ = require('lodash')
-const dnt = require('date-and-time')
-const htmlmin = require('html-minifier')
-const markdownIt = require('markdown-it')
+import _ from 'lodash'
+import dnt from 'date-and-time'
+import htmlmin from 'html-minifier'
+import markdownIt from 'markdown-it'
 
 const isProdDeployment = Boolean(
   process.env.ELEVENTY_RUN_MODE
   && process.env.ELEVENTY_RUN_MODE === 'build'
 )
 
-module.exports = (config) => {
+export default async function(config) {
   config.addFilter('formatDate', (date) => {
     const d = date
       ? new Date(date)

@@ -2,6 +2,7 @@
   "name": "bukmark.club",
   "version": "1.0.0",
   "description": "A directory of websites from across the Internet.",
+  "type": "module",
   "scripts": {
     "deploy": "eleventy",
     "info": "rm -f ./src/_data/info.json && node ./scripts/get-most-recent.js",
@@ -19,7 +20,7 @@
   },
   "homepage": "https://bukmark.club",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@antfu/ni": "^0.21.12",
     "cssnano": "^5.1.14",

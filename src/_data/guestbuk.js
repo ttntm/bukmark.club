@@ -1,9 +1,11 @@
-const config = require('dotenv').config()
-const eleventyFetch = require('@11ty/eleventy-fetch')
+import dotenv from 'dotenv'
+import eleventyFetch from '@11ty/eleventy-fetch'
+
+dotenv.config()
 
 const whitelist = [1,3,4,5,32,50]
 
-module.exports = async function() {
+export default async function() {
   let reqUrl = `https://api.netlify.com/api/v1/forms/${process.env.NTL_GUESTBUK}/submissions`
   let response = await eleventyFetch(reqUrl, {
     directory: '.cache',
