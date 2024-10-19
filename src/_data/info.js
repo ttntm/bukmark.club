@@ -6,7 +6,7 @@ function getMostRecentFile(dir) {
   return files.length
     ? {
       total: files.length-1,
-      result: files[0]
+      latest: files[0]
     }
     : undefined
 }
@@ -21,16 +21,14 @@ function orderRecentFiles(dir) {
     .sort((a, b) => b.btime.getTime() - a.btime.getTime())
 }
 
-function main() {
+export default function() {
   const {
     total,
-    result
+    latest
   } = getMostRecentFile('./src/directory/')
 
-  fs.writeFileSync('./src/_data/info.json', JSON.stringify({
+  return {
     directorySize: total,
-    mostRecentUpdate: result.btime
-  }))
+    mostRecentUpdate: latest.btime
+  }
 }
-
-main()

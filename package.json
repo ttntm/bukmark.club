@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "deploy": "eleventy",
-    "info": "rm -f ./src/_data/info.json && node ./scripts/get-most-recent.js",
-    "serve": "npm run info && eleventy --serve",
+    "serve": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
