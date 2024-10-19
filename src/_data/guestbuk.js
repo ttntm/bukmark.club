@@ -6,7 +6,7 @@ dotenv.config()
 const whitelist = [1,3,4,5,32,50,61,62]
 
 export default async function() {
-  if (!process.env.NTL_GUESTBUK || process.env.NTL_TOKEN) {
+  if (!process.env.NTL_GUESTBUK || !process.env.NTL_TOKEN) {
     return []
   }
 
