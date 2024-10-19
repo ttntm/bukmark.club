@@ -4,10 +4,8 @@
   "description": "A directory of websites from across the Internet.",
   "type": "module",
   "scripts": {
-    "clean": "rimraf ./src/_data/info.json",
-    "deploy": "npm run info && eleventy",
-    "info": "npm run clean && node ./scripts/get-most-recent.js",
-    "serve": "npm run info && eleventy --serve",
+    "deploy": "eleventy",
+    "serve": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,8 +29,5 @@
     "lodash": "^4.17.21",
     "postcss": "^8.4.31",
     "postcss-import": "^14.0.0"
-  },
-  "devDependencies": {
-    "rimraf": "^6.0.1"
   }
 }
