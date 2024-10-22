@@ -2,6 +2,7 @@ import _ from 'lodash'
 import dnt from 'date-and-time'
 import htmlmin from 'html-minifier'
 import markdownIt from 'markdown-it'
+import pluginRss from '@11ty/eleventy-plugin-rss'
 
 const isProdDeployment = Boolean(
   process.env.ELEVENTY_RUN_MODE
@@ -9,6 +10,8 @@ const isProdDeployment = Boolean(
 )
 
 export default async function(config) {
+  config.addPlugin(pluginRss)
+
   config.addFilter('formatDate', (date) => {
     const d = date
       ? new Date(date)
@@ -39,6 +42,10 @@ export default async function(config) {
       .groupBy((item) => String(item.data.title).toUpperCase()[0])
       .toPairs()
       .value()
+  })
+
+  config.addCollection('feed', async(collection) => {
+    return collection.getFilteredByGlob('./src/directory/*.md')
   })
 
   config.addCollection('latest', async(collection) => {

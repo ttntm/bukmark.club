@@ -1,0 +1,37 @@
+---
+title: Directory
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.author }} - Directory</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ site.baseUrl }}{{ permalink }}" rel="self" type="application/atom+xml" />
+  <link href="{{ site.baseUrl }}/directory/" rel="alternate" type="text/html"/>
+  <author>
+    <name>{{ site.author }}</name>
+  </author>
+  {% if collections.feed %}
+    <updated>{{ collections.feed | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  {% endif %}
+  <id>https://bukmark.club/directory/</id>
+  {%- for item in collections.feed | reverse -%}
+    <entry>
+      <title>{{ item.data.title }}</title>
+      <link href="https://bukmark.club/directory/"/>
+      <id>{{ item.data.title | slugify }}</id>
+      <content type="html"><![CDATA[
+        <h3>{{ item.data.title }}</h3>
+        {% if item.data.author %}
+          <p>Author: {{ item.data.author }}</p>
+        {% endif %}
+        <p>
+          <a href="{{ item.data.url }}" rel="nofollow noopener">
+            [Visit Site]
+          </a>
+        </p>
+      ]]></content>
+    </entry>
+  {%- endfor -%}
+</feed>
