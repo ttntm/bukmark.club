@@ -16,6 +16,7 @@
 <meta property="og:title" content="{{ title or site.title }}">
 <meta property="og:description" content="{{ description  or site.description }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
+{%- if image -%}
   <meta property="og:image" content="{{ image | url }}">
 {% else %}
   <meta property="og:image" content="{{ site.baseUrl }}/img/splash.png">
