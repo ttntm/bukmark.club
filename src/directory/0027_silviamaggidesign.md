@@ -1,5 +1,5 @@
 ---
-title: Silvia Maggi's Website
-url: https://silviamaggidesign.com
+title: Silvia Maggi's blog
+url: https://silviamaggi.co.uk
 author: Silvia Maggi
 ---
