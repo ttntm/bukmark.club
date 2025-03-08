@@ -24,13 +24,16 @@ export default async function() {
 
   if (response && response?.length > 0) {
     const data = response
-      .filter((entry) => whitelist.includes(entry.number))
-      .map((entry) => {
-        return {
-          ...entry.data,
-          created: entry.created_at
+      .reduce((_, entry) => {
+        if (whitelist.includes(entry.number)) {
+          _.push({
+            ...entry.data,
+            created: entry.created_at
+          })
         }
-      })
+
+        return _
+      }, [])
 
     return data.length > 0
       ? data

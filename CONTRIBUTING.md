@@ -20,7 +20,7 @@ Add your website's data in your `*.md` file using the following properties:
 
 1. Fork this repository
 2. Use `npm install` on your machine
-3. Use `npm run serve` to start a local web server at `localhost:8080`
+3. Use `npm run dev` to start a local web server at `localhost:8080`
 4. Make changes
 5. Test your changes
 6. Open a pull request with your changes
