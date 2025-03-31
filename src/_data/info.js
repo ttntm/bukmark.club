@@ -13,11 +13,19 @@ function getMostRecentFile(dir) {
 
 function orderRecentFiles(dir) {
   return fs.readdirSync(dir)
-    .filter((file) => fs.lstatSync(path.join(dir, file)).isFile())
-    .map((file) => ({
-      file,
-      btime: fs.lstatSync(path.join(dir, file)).birthtime
-    }))
+    .reduce((_, file) => {
+      if (
+        fs.lstatSync(path.join(dir, file)).isFile()
+        && path.extname(file).toLowerCase() === '.md'
+      ) {
+        _.push({
+          file,
+          btime: fs.lstatSync(path.join(dir, file)).birthtime
+        })
+      }
+
+      return _
+    }, [])
     .sort((a, b) => b.btime.getTime() - a.btime.getTime())
 }
 
