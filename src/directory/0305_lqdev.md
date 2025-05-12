@@ -1,5 +1,5 @@
 ---
 title: lqdev.me
-url: https://www.lqdev.me/feed/blogroll
+url: https://www.lqdev.me
 author: Luis
 ---
