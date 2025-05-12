@@ -1,6 +1,6 @@
 ---
 title: Mx.Poesu • artist
-url: https://mxpoesu.github.io
+url: https://poesu.lovestoblog.com
 author: El Poesu
 button: poesu.png
 ---
