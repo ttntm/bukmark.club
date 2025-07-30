@@ -1,6 +1,6 @@
 ---
 title: Skyhold
 url: https://skyhold.org
-author: C Jackdaw
+author: Jackdaw
 button: skyhold.png
 ---
