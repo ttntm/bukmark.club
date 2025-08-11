@@ -3,7 +3,7 @@ import eleventyFetch from '@11ty/eleventy-fetch'
 
 dotenv.config()
 
-const whitelist = [1,3,4,5,32,50,61,62,65,66,67,68,71,129,148,149,160,161]
+const whitelist = [1,3,4,5,32,50,61,62,65,66,67,68,71,129,148,149,160,161,176]
 
 export default async function() {
   if (!process.env.NTL_GUESTBUK || !process.env.NTL_TOKEN) {
