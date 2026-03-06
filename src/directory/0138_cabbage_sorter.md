@@ -1,5 +1,5 @@
 ---
 title: cabbage sorter
-url: https://cabbagesorter.neocities.org
+url: https://cabbagesorter.net
 button: cabbagesorter.gif
 ---
