@@ -1,5 +1,5 @@
 ---
 title: varve's burrow
-url: ttps://www.write-on.org
+url: https://www.write-on.org
 author: varve
 ---
